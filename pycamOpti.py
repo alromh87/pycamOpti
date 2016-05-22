@@ -44,8 +44,10 @@ def get_num(line,char_ptr,num_chars):
     while char_ptr < num_chars:
         digit = line[char_ptr]
         if good.find(digit) != -1:
-           numstr = numstr + digit
-           char_ptr = char_ptr + 1
+            numstr = numstr + digit
+            char_ptr = char_ptr + 1
+        elif numstr == '' and digit ==' ':
+            char_ptr = char_ptr + 1
         else: break
     return numstr
 
